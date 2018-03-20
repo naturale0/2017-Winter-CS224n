@@ -1,0 +1,43 @@
+# Fix for Python 3.6
+
+I made some changes to Python codes because original codes are based on Python 2.
+
+## For All Assignments:
+- I put parenthesis to `print()` function.
+- I changed `xrange()` to `range()`
+
+## For Assignment 1
+- URL in get_datasets.sh is not working since link to `glove.6B.50d.txt` is dead. You can use below link to download glove data. Also, you can download it from my Github Repository.
+    - https://nlp.stanford.edu/data/glove.6B.zip
+- Changed `import cPickle as pickle`  to `import pickle`
+- In Python 3, You don't have to take care of peculiar encodings in `treebank.py` line 68
+
+    I changed from
+    ```python
+    sentences += [[w.lower().decode('utf-8').encode('latin-1') for w in splitted]]
+    ```
+    to
+    ```python
+    sentences += [[w.lower() for w in splitted]]
+    ```
+
+
+- If you run `$ python q3_run.py`, you will see an error below.
+```python
+TypeError: write() argument must be str, not bytes
+```
+
+- This error is raised since `pickle.dump()` and `pickle.load()` do not accept string as input([docs](https://docs.python.org/3/library/pickle.html#pickle.dump)). So, file should be opened in binary mode.
+```python
+# Error!
+with open("saved_params_%d.npy" % iter, "w") as f:
+    pickle.dump(params, f)
+
+# Good!
+with open("saved_params_$d.npy" % iter, "wb") as f:
+    pickle.dump(params, f)
+```
+
+- In Question 4, `print >> "~~"` is used to write string to file. But this statement is not supported in Python 3, So i changed those lines to `print("~~", file=f)`
+
+
