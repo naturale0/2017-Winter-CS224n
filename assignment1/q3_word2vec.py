@@ -132,7 +132,7 @@ def negSamplingCostAndGradient(predicted, target, outputVectors, dataset,
     # backward propagation
     gradPred = (predicted_h0 - 1.) * u0 - np.dot((H-1.), sample_outputs)  # (1, V)
 
-    grad = np.zeros_like(outputVectors)  # create an empty (W, V) grad matrix.
+    grad = np.zeros_like(outputVectors)       # create an empty (W, V) grad matrix.
 
     target_grad = (predicted_h0 - 1.) * predicted                         # (1, V)
     K = H.shape[0]
