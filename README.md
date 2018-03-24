@@ -15,7 +15,9 @@ I made some changes to Python codes because original codes are based on Python 2
 - Changed `import cPickle as pickle`  to `import pickle`
 
 ## For Assignment 1
-- URL in get_datasets.sh is not working since link to `glove.6B.50d.txt` is dead. You can use below link to download glove data. Also, you can download it from my Github Repository.
+- URL in get_datasets.sh is not working since link to `glove.6B.50d.txt` is dead. So i changed download link to this github repository and it's working well! If `get_dataset.sh` does not work, Please let me know.
+
+    Also, you can use below link to download glove data.
     - https://nlp.stanford.edu/data/glove.6B.zip
 
 - In Python 3, You don't have to take care of peculiar encodings in `treebank.py` line 68
