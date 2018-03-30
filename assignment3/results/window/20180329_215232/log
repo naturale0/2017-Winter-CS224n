@@ -1,0 +1,48 @@
+2018-03-29 21:52:36,226:INFO: Building model...
+2018-03-29 21:52:37,276:INFO: took 1.05 seconds
+2018-03-29 21:52:38,090:INFO: Epoch 1 out of 10
+2018-03-29 21:52:41,355:INFO: Evaluating on development data
+2018-03-29 21:52:42,311:DEBUG: Token-level confusion matrix:
+go\gu   	PER     	ORG     	LOC     	MISC    	O       
+PER     	2655.00 	158.00  	83.00   	10.00   	243.00  
+ORG     	428.00  	978.00  	271.00  	82.00   	333.00  
+LOC     	135.00  	238.00  	1359.00 	83.00   	279.00  
+MISC    	139.00  	244.00  	134.00  	525.00  	226.00  
+O       	130.00  	120.00  	47.00   	21.00   	42441.00
+
+2018-03-29 21:52:42,316:DEBUG: Token-level scores:
+label	acc  	prec 	rec  	f1   
+PER  	0.97 	0.76 	0.84 	0.80 
+ORG  	0.96 	0.56 	0.47 	0.51 
+LOC  	0.98 	0.72 	0.65 	0.68 
+MISC 	0.98 	0.73 	0.41 	0.53 
+O    	0.97 	0.98 	0.99 	0.98 
+micro	0.97 	0.93 	0.93 	0.93 
+macro	0.97 	0.75 	0.67 	0.70 
+not-O	0.97 	0.70 	0.64 	0.67 
+
+2018-03-29 21:52:42,316:INFO: Entity level P/R/F1: 0.59/0.59/0.59
+2018-03-29 21:52:42,316:INFO: New best score! Saving model in results/window/20180329_215232/model.weights
+2018-03-29 21:52:42,633:INFO: Epoch 2 out of 10
+2018-03-29 21:52:45,933:INFO: Evaluating on development data
+2018-03-29 21:52:46,970:DEBUG: Token-level confusion matrix:
+go\gu   	PER     	ORG     	LOC     	MISC    	O       
+PER     	2781.00 	97.00   	83.00   	16.00   	172.00  
+ORG     	338.00  	1243.00 	183.00  	96.00   	232.00  
+LOC     	95.00   	291.00  	1502.00 	80.00   	126.00  
+MISC    	93.00   	189.00  	89.00   	752.00  	145.00  
+O       	80.00   	104.00  	32.00   	36.00   	42507.00
+
+2018-03-29 21:52:46,970:DEBUG: Token-level scores:
+label	acc  	prec 	rec  	f1   
+PER  	0.98 	0.82 	0.88 	0.85 
+ORG  	0.97 	0.65 	0.59 	0.62 
+LOC  	0.98 	0.80 	0.72 	0.75 
+MISC 	0.99 	0.77 	0.59 	0.67 
+O    	0.98 	0.98 	0.99 	0.99 
+micro	0.98 	0.95 	0.95 	0.95 
+macro	0.98 	0.80 	0.76 	0.78 
+not-O	0.98 	0.77 	0.73 	0.75 
+
+2018-03-29 21:52:46,970:INFO: Entity level P/R/F1: 0.66/0.69/0.67
+2018-03-29 21:52:46,970:INFO: New best score! Saving model in results/window/20180329_215232/model.weights
